@@ -1,0 +1,25 @@
+"dummy line\n"
+{"val_loss": 9.312438011169434, "train_loss": 13.265, "bleu_score": 0.0, "epoch": 0.21}
+{"val_loss": 7.030812740325928, "train_loss": 9.269, "bleu_score": 0.0, "epoch": 0.42}
+{"val_loss": 6.511497497558594, "train_loss": 7.512, "bleu_score": 0.0, "epoch": 0.62}
+{"val_loss": 5.803572177886963, "train_loss": 6.5982, "bleu_score": 0.0, "epoch": 0.83}
+{"val_loss": 5.4284820556640625, "train_loss": 5.9149, "bleu_score": 0.0, "epoch": 1.04}
+{"val_loss": 5.314598083496094, "train_loss": 5.4857, "bleu_score": 0.0, "epoch": 1.25}
+{"val_loss": 5.299184799194336, "train_loss": 5.2523, "bleu_score": 0.00038385954454261273, "epoch": 1.46}
+{"val_loss": 5.234111309051514, "train_loss": 5.1203, "bleu_score": 0.0, "epoch": 1.66}
+{"val_loss": 5.197697639465332, "train_loss": 5.0307, "bleu_score": 0.0, "epoch": 1.87}
+{"val_loss": 5.194409370422363, "train_loss": 4.9631, "bleu_score": 0.0, "epoch": 2.08}
+{"val_loss": 5.187411308288574, "train_loss": 4.9013, "bleu_score": 0.0, "epoch": 2.29}
+{"val_loss": 5.161023139953613, "train_loss": 4.8642, "bleu_score": 0.0, "epoch": 2.5}
+{"val_loss": 5.127762794494629, "train_loss": 4.8304, "bleu_score": 0.0, "epoch": 2.71}
+{"val_loss": 5.122520446777344, "train_loss": 4.8091, "bleu_score": 0.0, "epoch": 2.91}
+{"val_loss": 5.111589431762695, "train_loss": 4.7825, "bleu_score": 0.0, "epoch": 3.12}
+{"val_loss": 5.105804920196533, "train_loss": 4.7653, "bleu_score": 0.0, "epoch": 3.33}
+{"val_loss": 5.0875983238220215, "train_loss": 4.7471, "bleu_score": 0.0, "epoch": 3.54}
+{"val_loss": 5.079893112182617, "train_loss": 4.7267, "bleu_score": 0.0, "epoch": 3.75}
+{"val_loss": 5.07155704498291, "train_loss": 4.7287, "bleu_score": 0.0, "epoch": 3.95}
+{"val_loss": 5.06963586807251, "train_loss": 4.7148, "bleu_score": 0.0, "epoch": 4.16}
+{"val_loss": 5.067615985870361, "train_loss": 4.7064, "bleu_score": 0.0, "epoch": 4.37}
+{"val_loss": 5.059089183807373, "train_loss": 4.6987, "bleu_score": 0.0, "epoch": 4.58}
+{"val_loss": 5.059882640838623, "train_loss": 4.6929, "bleu_score": 0.0, "epoch": 4.79}
+{"val_loss": 5.057455062866211, "train_loss": 4.6996, "bleu_score": 0.0, "epoch": 4.99}

@@ -1,0 +1,6 @@
+---
+prefix_filter: None
+max_length: 15
+filename: "rus.txt"
+train_size: 0.8
+batch_size: 128

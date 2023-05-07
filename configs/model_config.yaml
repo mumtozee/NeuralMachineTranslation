@@ -1,0 +1,11 @@
+---
+nhead: 8
+emb_size: 512
+dim_feedforward: 512
+num_encoder_layers: 6
+num_decoder_layers: 6
+dropout: 0.1
+lr: 0.00001
+weight_decay: 0.03
+epoch_num: 100
+try_one_batch: False
