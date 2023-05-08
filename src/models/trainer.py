@@ -29,7 +29,7 @@ class Trainer:
                         val_epoch_loss += val_loss
                     val_epoch_loss = val_epoch_loss / len(val_dataloader)
 
-                    input_tensor, target_tensor = batch
+                    input_tensor, target_tensor = batch[0][:100], batch[1][:100]
                     predicted_samples = self.model.generate(input_tensor.to(self.model.device))
                     (
                         bleu_score,

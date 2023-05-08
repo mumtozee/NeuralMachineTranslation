@@ -3,6 +3,7 @@ import typing as tp
 from transformers import PreTrainedTokenizerFast
 
 from tokenizers import Tokenizer
+from tokenizers.decoders import BPEDecoder
 from tokenizers.models import BPE
 from tokenizers.trainers import BpeTrainer
 from tokenizers.pre_tokenizers import Whitespace
@@ -13,16 +14,21 @@ class BPETokenizer:
     PAD = "<pad>"
     EOS = "<eos>"
     BOS = "<bos>"
+    EOW = "</w>"
 
     def __init__(self, sentence_list, to_train: bool = True):
         """
         sentence_list - список предложений для обучения
         """
         self.is_trained = False
-        self.tokenizer = Tokenizer(BPE(unk_token=self.UNK))
+        self.tokenizer = Tokenizer(BPE(unk_token=self.UNK, end_of_word_suffix=self.EOW))
         self.tokenizer.pre_tokenizer = Whitespace()
+        self.tokenizer.decoder = BPEDecoder(suffix=self.EOW)
         self.special_tokens_set = {self.UNK, self.PAD, self.BOS, self.EOS}
-        self.trainer = BpeTrainer(special_tokens=[self.UNK, self.PAD, self.BOS, self.EOS])
+        self.trainer = BpeTrainer(
+            special_tokens=[self.UNK, self.PAD, self.BOS, self.EOS],
+            end_of_word_suffix=self.EOW,
+        )
         if to_train:
             self._train(sentence_list)
         self.word2index = dict()
@@ -68,9 +74,10 @@ class BPETokenizer:
         """
         token_list - предсказанные ID вашего токенизатора
         """
-        predicted_tokens = []
-        for token_id in token_list:
-            predicted_token = self.index2word[token_id]
-            if predicted_token not in self.special_tokens_set:
-                predicted_tokens.append(predicted_token)
-        return predicted_tokens
+        # predicted_tokens = []
+        # for token_id in token_list:
+        #     predicted_token = self.index2word[token_id]
+        #     if predicted_token not in self.special_tokens_set:
+        #         predicted_tokens.append(predicted_token)
+        # return predicted_tokens
+        return self.tokenizer.decode(token_list).split()
